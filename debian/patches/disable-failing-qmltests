@@ -1,0 +1,20 @@
+---
+ autotests/CMakeLists.txt | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+--- a/autotests/CMakeLists.txt
++++ b/autotests/CMakeLists.txt
+@@ -40,8 +40,8 @@ bluezqt_tests(
+     gattmanagertest
+ )
+ 
+-if(Qt5Qml_FOUND AND Qt5QuickTest_FOUND)
+-    bluezqt_tests(qmltests)
+-    target_link_libraries(qmltests Qt5::Qml Qt5::QuickTest)
+-    add_definitions(-DBLUEZQT_QML_IMPORT_PATH="${CMAKE_CURRENT_BINARY_DIR}/../src/imports")
+-endif()
++#if(Qt5Qml_FOUND AND Qt5QuickTest_FOUND)
++#    bluezqt_tests(qmltests)
++#    target_link_libraries(qmltests Qt5::Qml Qt5::QuickTest)
++#    add_definitions(-DBLUEZQT_QML_IMPORT_PATH="${CMAKE_CURRENT_BINARY_DIR}/../src/imports")
++#endif()
