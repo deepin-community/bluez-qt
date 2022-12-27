@@ -17,6 +17,12 @@ set(bluezqt_SRCS
     gattservice.cpp
     gattservice_p.cpp
     gattserviceadaptor.cpp
+    gattserviceremote.cpp
+    gattserviceremote_p.cpp
+    gattcharacteristicremote.cpp
+    gattcharacteristicremote_p.cpp
+    gattdescriptorremote.cpp
+    gattdescriptorremote_p.cpp
     input.cpp
     leadvertisement.cpp
     leadvertisement_p.cpp
@@ -72,6 +78,8 @@ set(obexfiletransfer1_xml ${CMAKE_CURRENT_SOURCE_DIR}/interfaces/org.bluez.obex.
 set_source_files_properties(${obexfiletransfer1_xml} PROPERTIES INCLUDE "bluezqt_dbustypes.h")
 qt_add_dbus_interface(bluezqt_SRCS ${obexfiletransfer1_xml} obexfiletransfer1)
 
+qt_add_dbus_interface(bluezqt_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/interfaces/org.bluez.GattDescriptor1.xml bluezgattdescriptor1)
+qt_add_dbus_interface(bluezqt_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/interfaces/org.bluez.GattService1.xml bluezgattservice1)
 qt_add_dbus_interface(bluezqt_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/interfaces/org.freedesktop.DBus.Properties.xml dbusproperties)
 qt_add_dbus_interface(bluezqt_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/interfaces/org.bluez.Adapter1.xml bluezadapter1)
 qt_add_dbus_interface(bluezqt_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/interfaces/org.bluez.AgentManager1.xml bluezagentmanager1)
@@ -103,14 +111,14 @@ ecm_generate_export_header(KF5BluezQt
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_include_directories(KF5BluezQt INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/BluezQt>")
+target_include_directories(KF5BluezQt INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/BluezQt>")
 
 target_link_libraries(KF5BluezQt
     PUBLIC
-        Qt5::Core
+        Qt${QT_MAJOR_VERSION}::Core
     PRIVATE
-        Qt5::DBus
-        Qt5::Network
+        Qt${QT_MAJOR_VERSION}::DBus
+        Qt${QT_MAJOR_VERSION}::Network
 )
 
 set_target_properties(KF5BluezQt
@@ -129,6 +137,9 @@ ecm_generate_headers(BluezQt_CamelCase_HEADERS
         GattCharacteristic
         GattManager
         GattService
+        GattServiceRemote
+        GattCharacteristicRemote
+        GattDescriptorRemote
         Input
         LEAdvertisement
         LEAdvertisingManager
@@ -168,13 +179,13 @@ install(TARGETS KF5BluezQt
 
 install(FILES
     ${BluezQt_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/BluezQt/BluezQt
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/BluezQt/BluezQt
     COMPONENT Devel)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/bluezqt_export.h
     ${BluezQt_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/BluezQt/bluezqt
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/BluezQt/bluezqt
     COMPONENT Devel)
 
 ecm_qt_install_logging_categories(
@@ -195,7 +206,7 @@ if(BUILD_QCH)
             ${BluezQt_HEADERS}
         MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         LINK_QCHS
-            Qt5Core_QCH
+            Qt${QT_MAJOR_VERSION}Core_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
@@ -216,7 +227,7 @@ ecm_generate_pri_file(
     LIB_NAME KF5BluezQt
     DEPS "core"
     FILENAME_VAR PRI_FILENAME
-    INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/BluezQt
+    INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/BluezQt
 )
 install(FILES ${PRI_FILENAME}
         DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

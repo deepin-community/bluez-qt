@@ -8,7 +8,6 @@
 
 #include "adapter.h"
 #include "adapter_p.h"
-#include "device.h"
 #include "device_p.h"
 #include "pendingcall.h"
 
@@ -168,6 +167,16 @@ PendingCall *Adapter::stopDiscovery()
 PendingCall *Adapter::removeDevice(DevicePtr device)
 {
     return new PendingCall(d->m_bluezAdapter->RemoveDevice(QDBusObjectPath(device->ubi())), PendingCall::ReturnVoid, this);
+}
+
+PendingCall* Adapter::setDiscoveryFilter(const QVariantMap& filter)
+{
+    return new PendingCall(d->m_bluezAdapter->SetDiscoveryFilter(filter), PendingCall::ReturnVoid, this);
+}
+
+PendingCall* Adapter::getDiscoveryFilters()
+{
+    return new PendingCall(d->m_bluezAdapter->GetDiscoveryFilters(), PendingCall::ReturnStringList, this);
 }
 
 } // namespace BluezQt

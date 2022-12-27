@@ -203,6 +203,24 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZN7BluezQt16ObexFileTransferD0Ev@Base 5.2.50
  _ZN7BluezQt16ObexFileTransferD1Ev@Base 5.2.50
  _ZN7BluezQt16ObexFileTransferD2Ev@Base 5.2.50
+ _ZN7BluezQt17GattServiceRemote11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote11qt_metacastEPKc@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote11uuidChangedERK7QString@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote13handleChangedEt@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote14primaryChangedEb@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote14serviceChangedE14QSharedPointerIS0_E@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote15includesChangedERK5QListI15QDBusObjectPathE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote16staticMetaObjectE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote22characteristicsChangedE5QListI14QSharedPointerINS_24GattCharacteristicRemoteEEE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote23gattCharacteristicAddedE14QSharedPointerINS_24GattCharacteristicRemoteEE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote25gattCharacteristicChangedE14QSharedPointerINS_24GattCharacteristicRemoteEE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote25gattCharacteristicRemovedE14QSharedPointerINS_24GattCharacteristicRemoteEE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemote9setHandleEt@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemoteC1ERK7QStringRK4QMapIS1_8QVariantE14QSharedPointerINS_6DeviceEE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemoteC2ERK7QStringRK4QMapIS1_8QVariantE14QSharedPointerINS_6DeviceEE@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemoteD0Ev@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemoteD1Ev@Base 5.90.0
+ _ZN7BluezQt17GattServiceRemoteD2Ev@Base 5.90.0
  _ZN7BluezQt18GattCharacteristic10writeValueERK10QByteArray@Base 5.61.0
  _ZN7BluezQt18GattCharacteristic11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.61.0
  _ZN7BluezQt18GattCharacteristic11qt_metacastEPKc@Base 5.61.0
@@ -226,6 +244,22 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZN7BluezQt18InitObexManagerJobD0Ev@Base 5.2.50
  _ZN7BluezQt18InitObexManagerJobD1Ev@Base 5.2.50
  _ZN7BluezQt18InitObexManagerJobD2Ev@Base 5.2.50
+ _ZN7BluezQt20GattDescriptorRemote10writeValueERK10QByteArrayRK4QMapI7QString8QVariantE@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote11qt_metacastEPKc@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote11uuidChangedERK7QString@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote12flagsChangedE11QStringList@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote12valueChangedE10QByteArray@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote13handleChangedEt@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote16staticMetaObjectE@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote17descriptorChangedE14QSharedPointerIS0_E@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote9readValueERK4QMapI7QString8QVariantE@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemote9setHandleEt@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemoteC1ERK7QStringRK4QMapIS1_8QVariantE14QSharedPointerINS_24GattCharacteristicRemoteEE@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemoteC2ERK7QStringRK4QMapIS1_8QVariantE14QSharedPointerINS_24GattCharacteristicRemoteEE@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemoteD0Ev@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemoteD1Ev@Base 5.90.0
+ _ZN7BluezQt20GattDescriptorRemoteD2Ev@Base 5.90.0
  _ZN7BluezQt20LEAdvertisingManager11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.61.0
  _ZN7BluezQt20LEAdvertisingManager11qt_metacastEPKc@Base 5.61.0
  _ZN7BluezQt20LEAdvertisingManager16staticMetaObjectE@Base 5.61.0
@@ -246,6 +280,33 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZN7BluezQt21ObexFileTransferEntryD1Ev@Base 5.13.0
  _ZN7BluezQt21ObexFileTransferEntryD2Ev@Base 5.13.0
  _ZN7BluezQt21ObexFileTransferEntryaSERKS0_@Base 5.13.0
+ _ZN7BluezQt24GattCharacteristicRemote10MTUChangedEt@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote10stopNotifyEv@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote10writeValueERK10QByteArrayRK4QMapI7QString8QVariantE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote11qt_metacastEPKc@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote11startNotifyEv@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote11uuidChangedERK7QString@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote12flagsChangedE11QStringList@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote12valueChangedE10QByteArray@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote13handleChangedEt@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote16notifyingChangedEb@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote16staticMetaObjectE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote18descriptorsChangedE5QListI14QSharedPointerINS_20GattDescriptorRemoteEEE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote19gattDescriptorAddedE14QSharedPointerINS_20GattDescriptorRemoteEE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote20writeAcquiredChangedEb@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote21characteristicChangedE14QSharedPointerIS0_E@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote21gattDescriptorChangedE14QSharedPointerINS_20GattDescriptorRemoteEE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote21gattDescriptorRemovedE14QSharedPointerINS_20GattDescriptorRemoteEE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote21notifyAcquiredChangedEb@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote7confirmEv@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote9readValueERK4QMapI7QString8QVariantE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemote9setHandleEt@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemoteC1ERK7QStringRK4QMapIS1_8QVariantE14QSharedPointerINS_17GattServiceRemoteEE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemoteC2ERK7QStringRK4QMapIS1_8QVariantE14QSharedPointerINS_17GattServiceRemoteEE@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemoteD0Ev@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemoteD1Ev@Base 5.90.0
+ _ZN7BluezQt24GattCharacteristicRemoteD2Ev@Base 5.90.0
  _ZN7BluezQt28bluezqt_initFakeBluezTestRunEv@Base 5.2.50
  _ZN7BluezQt3Job10emitResultEv@Base 5.2.50
  _ZN7BluezQt3Job11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.2.50
@@ -318,17 +379,23 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZN7BluezQt6Device15connectToDeviceEv@Base 5.13.0
  _ZN7BluezQt6Device15modaliasChangedERK7QString@Base 5.2.50
  _ZN7BluezQt6Device16connectedChangedEb@Base 5.2.50
+ _ZN7BluezQt6Device16gattServiceAddedE14QSharedPointerINS_17GattServiceRemoteEE@Base 5.90.0
  _ZN7BluezQt6Device16staticMetaObjectE@Base 5.2.50
  _ZN7BluezQt6Device17appearanceChangedEt@Base 5.2.50
  _ZN7BluezQt6Device17disconnectProfileERK7QString@Base 5.2.50
  _ZN7BluezQt6Device17remoteNameChangedERK7QString@Base 5.2.50
  _ZN7BluezQt6Device18deviceClassChangedEj@Base 5.2.50
+ _ZN7BluezQt6Device18gattServiceChangedE14QSharedPointerINS_17GattServiceRemoteEE@Base 5.90.0
+ _ZN7BluezQt6Device18gattServiceRemovedE14QSharedPointerINS_17GattServiceRemoteEE@Base 5.90.0
  _ZN7BluezQt6Device18mediaPlayerChangedE14QSharedPointerINS_11MediaPlayerEE@Base 5.13.0
  _ZN7BluezQt6Device18serviceDataChangedERK5QHashI7QString10QByteArrayE@Base 5.74.0
  _ZN7BluezQt6Device19friendlyNameChangedERK7QString@Base 5.2.50
+ _ZN7BluezQt6Device19gattServicesChangedE5QListI14QSharedPointerINS_17GattServiceRemoteEEE@Base 5.90.0
  _ZN7BluezQt6Device20disconnectFromDeviceEv@Base 5.13.0
  _ZN7BluezQt6Device20legacyPairingChangedEb@Base 5.2.50
  _ZN7BluezQt6Device21mediaTransportChangedE14QSharedPointerINS_14MediaTransportEE@Base 5.61.0
+ _ZN7BluezQt6Device23manufacturerDataChangedE4QMapIt10QByteArrayE@Base 5.90.0
+ _ZN7BluezQt6Device23servicesResolvedChangedEb@Base 5.90.0
  _ZN7BluezQt6Device4pairEv@Base 5.2.50
  _ZN7BluezQt6Device7setNameERK7QString@Base 5.2.50
  _ZN7BluezQt6DeviceC1ERK7QStringRK4QMapIS1_8QVariantE14QSharedPointerINS_7AdapterEE@Base 5.2.50
@@ -376,9 +443,11 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZN7BluezQt7Adapter17systemNameChangedERK7QString@Base 5.2.50
  _ZN7BluezQt7Adapter18discoveringChangedEb@Base 5.2.50
  _ZN7BluezQt7Adapter18gattManagerChangedE14QSharedPointerINS_11GattManagerEE@Base 5.61.0
+ _ZN7BluezQt7Adapter18setDiscoveryFilterERK4QMapI7QString8QVariantE@Base 5.90.0
  _ZN7BluezQt7Adapter18setPairableTimeoutEj@Base 5.2.50
  _ZN7BluezQt7Adapter19adapterClassChangedEj@Base 5.2.50
  _ZN7BluezQt7Adapter19discoverableChangedEb@Base 5.2.50
+ _ZN7BluezQt7Adapter19getDiscoveryFiltersEv@Base 5.90.0
  _ZN7BluezQt7Adapter22pairableTimeoutChangedEj@Base 5.2.50
  _ZN7BluezQt7Adapter22setDiscoverableTimeoutEj@Base 5.2.50
  _ZN7BluezQt7Adapter26discoverableTimeoutChangedEj@Base 5.2.50
@@ -574,12 +643,29 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZNK7BluezQt16MediaPlayerTrack8durationEv@Base 5.13.0
  _ZNK7BluezQt16ObexFileTransfer10metaObjectEv@Base 5.2.50
  _ZNK7BluezQt16ObexFileTransfer10objectPathEv@Base 5.2.50
+ _ZNK7BluezQt17GattServiceRemote10metaObjectEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote11toSharedPtrEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote15characteristicsEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote3ubiEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote4uuidEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote6deviceEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote6handleEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote8includesEv@Base 5.90.0
+ _ZNK7BluezQt17GattServiceRemote9isPrimaryEv@Base 5.90.0
  _ZNK7BluezQt18GattCharacteristic10metaObjectEv@Base 5.61.0
  _ZNK7BluezQt18GattCharacteristic10objectPathEv@Base 5.61.0
  _ZNK7BluezQt18GattCharacteristic4uuidEv@Base 5.61.0
  _ZNK7BluezQt18GattCharacteristic7serviceEv@Base 5.61.0
  _ZNK7BluezQt18InitObexManagerJob10metaObjectEv@Base 5.2.50
  _ZNK7BluezQt18InitObexManagerJob7managerEv@Base 5.2.50
+ _ZNK7BluezQt20GattDescriptorRemote10metaObjectEv@Base 5.90.0
+ _ZNK7BluezQt20GattDescriptorRemote11toSharedPtrEv@Base 5.90.0
+ _ZNK7BluezQt20GattDescriptorRemote14characteristicEv@Base 5.90.0
+ _ZNK7BluezQt20GattDescriptorRemote3ubiEv@Base 5.90.0
+ _ZNK7BluezQt20GattDescriptorRemote4uuidEv@Base 5.90.0
+ _ZNK7BluezQt20GattDescriptorRemote5flagsEv@Base 5.90.0
+ _ZNK7BluezQt20GattDescriptorRemote5valueEv@Base 5.90.0
+ _ZNK7BluezQt20GattDescriptorRemote6handleEv@Base 5.90.0
  _ZNK7BluezQt20LEAdvertisingManager10metaObjectEv@Base 5.61.0
  _ZNK7BluezQt21ObexFileTransferEntry10memoryTypeEv@Base 5.13.0
  _ZNK7BluezQt21ObexFileTransferEntry11permissionsEv@Base 5.13.0
@@ -589,6 +675,19 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZNK7BluezQt21ObexFileTransferEntry4typeEv@Base 5.13.0
  _ZNK7BluezQt21ObexFileTransferEntry5labelEv@Base 5.13.0
  _ZNK7BluezQt21ObexFileTransferEntry7isValidEv@Base 5.13.0
+ _ZNK7BluezQt24GattCharacteristicRemote10metaObjectEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote11descriptorsEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote11isNotifyingEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote11toSharedPtrEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote15isWriteAcquiredEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote16isNotifyAcquiredEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote3MTUEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote3ubiEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote4uuidEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote5flagsEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote5valueEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote6handleEv@Base 5.90.0
+ _ZNK7BluezQt24GattCharacteristicRemote7serviceEv@Base 5.90.0
  _ZNK7BluezQt3Job10isFinishedEv@Base 5.2.50
  _ZNK7BluezQt3Job10metaObjectEv@Base 5.2.50
  _ZNK7BluezQt3Job5errorEv@Base 5.2.50
@@ -609,8 +708,11 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZNK7BluezQt6Device11serviceDataEv@Base 5.74.0
  _ZNK7BluezQt6Device11toSharedPtrEv@Base 5.2.50
  _ZNK7BluezQt6Device12friendlyNameEv@Base 5.2.50
+ _ZNK7BluezQt6Device12gattServicesEv@Base 5.90.0
  _ZNK7BluezQt6Device14mediaTransportEv@Base 5.61.0
  _ZNK7BluezQt6Device16hasLegacyPairingEv@Base 5.2.50
+ _ZNK7BluezQt6Device16manufacturerDataEv@Base 5.90.0
+ _ZNK7BluezQt6Device18isServicesResolvedEv@Base 5.90.0
  _ZNK7BluezQt6Device3ubiEv@Base 5.2.50
  _ZNK7BluezQt6Device4iconEv@Base 5.2.50
  _ZNK7BluezQt6Device4nameEv@Base 5.2.50
@@ -694,10 +796,13 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZTIN7BluezQt15LEAdvertisementE@Base 5.61.0
  _ZTIN7BluezQt16MediaPlayerTrackE@Base 5.13.0
  _ZTIN7BluezQt16ObexFileTransferE@Base 5.2.50
+ _ZTIN7BluezQt17GattServiceRemoteE@Base 5.90.0
  _ZTIN7BluezQt18GattCharacteristicE@Base 5.61.0
  _ZTIN7BluezQt18InitObexManagerJobE@Base 5.2.50
+ _ZTIN7BluezQt20GattDescriptorRemoteE@Base 5.90.0
  _ZTIN7BluezQt20LEAdvertisingManagerE@Base 5.61.0
  _ZTIN7BluezQt21ObexFileTransferEntryE@Base 5.13.0
+ _ZTIN7BluezQt24GattCharacteristicRemoteE@Base 5.90.0
  _ZTIN7BluezQt3JobE@Base 5.2.50
  _ZTIN7BluezQt5AgentE@Base 5.2.50
  _ZTIN7BluezQt5InputE@Base 5.13.0
@@ -730,10 +835,13 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZTSN7BluezQt15LEAdvertisementE@Base 5.61.0
  _ZTSN7BluezQt16MediaPlayerTrackE@Base 5.13.0
  _ZTSN7BluezQt16ObexFileTransferE@Base 5.2.50
+ _ZTSN7BluezQt17GattServiceRemoteE@Base 5.90.0
  _ZTSN7BluezQt18GattCharacteristicE@Base 5.61.0
  _ZTSN7BluezQt18InitObexManagerJobE@Base 5.2.50
+ _ZTSN7BluezQt20GattDescriptorRemoteE@Base 5.90.0
  _ZTSN7BluezQt20LEAdvertisingManagerE@Base 5.61.0
  _ZTSN7BluezQt21ObexFileTransferEntryE@Base 5.13.0
+ _ZTSN7BluezQt24GattCharacteristicRemoteE@Base 5.90.0
  _ZTSN7BluezQt3JobE@Base 5.2.50
  _ZTSN7BluezQt5AgentE@Base 5.2.50
  _ZTSN7BluezQt5InputE@Base 5.13.0
@@ -765,10 +873,13 @@ libKF5BluezQt.so.6 libkf5bluezqt6 #MINVER#
  _ZTVN7BluezQt15LEAdvertisementE@Base 5.61.0
  _ZTVN7BluezQt16MediaPlayerTrackE@Base 5.13.0
  _ZTVN7BluezQt16ObexFileTransferE@Base 5.2.50
+ _ZTVN7BluezQt17GattServiceRemoteE@Base 5.90.0
  _ZTVN7BluezQt18GattCharacteristicE@Base 5.61.0
  _ZTVN7BluezQt18InitObexManagerJobE@Base 5.2.50
+ _ZTVN7BluezQt20GattDescriptorRemoteE@Base 5.90.0
  _ZTVN7BluezQt20LEAdvertisingManagerE@Base 5.61.0
  _ZTVN7BluezQt21ObexFileTransferEntryE@Base 5.13.0
+ _ZTVN7BluezQt24GattCharacteristicRemoteE@Base 5.90.0
  _ZTVN7BluezQt3JobE@Base 5.2.50
  _ZTVN7BluezQt5AgentE@Base 5.2.50
  _ZTVN7BluezQt5InputE@Base 5.13.0

@@ -9,6 +9,9 @@ set(fakebluez_SRCS
     devicemanager.cpp
     adapterinterface.cpp
     deviceinterface.cpp
+    gattserviceinterface.cpp
+    gattcharacteristicinterface.cpp
+    gattdescriptorinterface.cpp
     batteryinterface.cpp
     inputinterface.cpp
     mediaplayerinterface.cpp
@@ -23,6 +26,6 @@ set(fakebluez_SRCS
 add_executable(fakebluez ${fakebluez_SRCS})
 
 target_link_libraries(fakebluez
-    Qt5::Core
-    Qt5::DBus
+    Qt${QT_MAJOR_VERSION}::Core
+    Qt${QT_MAJOR_VERSION}::DBus
 )

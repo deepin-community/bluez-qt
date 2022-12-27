@@ -101,7 +101,7 @@ public:
     /**
      * Destroys a PendingCall object.
      */
-    ~PendingCall();
+    ~PendingCall() override;
 
     /**
      * Returns a first return value of the call.
@@ -171,9 +171,11 @@ private:
         ReturnVoid,
         ReturnUint32,
         ReturnString,
+        ReturnStringList,
         ReturnObjectPath,
         ReturnFileTransferList,
         ReturnTransferWithProperties,
+        ReturnByteArray
     };
 
     explicit PendingCall(const QDBusPendingCall &call, ReturnType type, QObject *parent = nullptr);
@@ -187,6 +189,9 @@ private:
     friend class PendingCallPrivate;
     friend class Manager;
     friend class Adapter;
+    friend class GattServiceRemote;
+    friend class GattCharacteristicRemote;
+    friend class GattDescriptorRemote;
     friend class Device;
     friend class GattManager;
     friend class LEAdvertisingManager;

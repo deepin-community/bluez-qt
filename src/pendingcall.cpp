@@ -67,9 +67,11 @@ public:
     void processVoidReply(const QDBusPendingReply<> &reply);
     void processUint32Reply(const QDBusPendingReply<quint32> &reply);
     void processStringReply(const QDBusPendingReply<QString> &reply);
+    void processStringListReply(const QDBusPendingReply<QStringList> &reply);
     void processObjectPathReply(const QDBusPendingReply<QDBusObjectPath> &reply);
     void processFileTransferListReply(const QDBusPendingReply<QVariantMapList> &reply);
     void processTransferWithPropertiesReply(const QDBusPendingReply<QDBusObjectPath, QVariantMap> &reply);
+    void processByteArrayReply(const QDBusPendingReply<QByteArray> &reply);
     void processError(const QDBusError &m_error);
 
     void emitFinished();
@@ -110,6 +112,10 @@ void PendingCallPrivate::processReply(QDBusPendingCallWatcher *call)
         processStringReply(*call);
         break;
 
+    case PendingCall::ReturnStringList:
+        processStringListReply(*call);
+        break;
+
     case PendingCall::ReturnObjectPath:
         processObjectPathReply(*call);
         break;
@@ -120,6 +126,10 @@ void PendingCallPrivate::processReply(QDBusPendingCallWatcher *call)
 
     case PendingCall::ReturnTransferWithProperties:
         processTransferWithPropertiesReply(*call);
+        break;
+
+    case PendingCall::ReturnByteArray:
+        processByteArrayReply(*call);
         break;
 
     default:
@@ -141,6 +151,14 @@ void PendingCallPrivate::processUint32Reply(const QDBusPendingReply<quint32> &re
 }
 
 void PendingCallPrivate::processStringReply(const QDBusPendingReply<QString> &reply)
+{
+    processError(reply.error());
+    if (!reply.isError()) {
+        m_value.append(reply.value());
+    }
+}
+
+void PendingCallPrivate::processStringListReply(const QDBusPendingReply<QStringList> &reply)
 {
     processError(reply.error());
     if (!reply.isError()) {
@@ -181,6 +199,14 @@ void PendingCallPrivate::processTransferWithPropertiesReply(const QDBusPendingRe
     transfer->d->q = transfer.toWeakRef();
     transfer->d->m_suspendable = true;
     m_value.append(QVariant::fromValue(transfer));
+}
+
+void PendingCallPrivate::processByteArrayReply(const QDBusPendingReply<QByteArray> &reply)
+{
+    processError(reply.error());
+    if (!reply.isError()) {
+        m_value.append(QVariant::fromValue(reply.value()));
+    }
 }
 
 void PendingCallPrivate::processError(const QDBusError &error)

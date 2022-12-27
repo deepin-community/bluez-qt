@@ -18,7 +18,7 @@
 
 namespace BluezQt
 {
-class RfkillPrivate;
+struct RfkillPrivate;
 
 class BLUEZQT_EXPORT Rfkill : public QObject
 {
@@ -35,7 +35,7 @@ public:
     Q_ENUM(State)
 
     explicit Rfkill(QObject *parent = nullptr);
-    ~Rfkill();
+    ~Rfkill() override;
 
     State state() const;
     bool block();

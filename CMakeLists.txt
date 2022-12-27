@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_VERSION "5.86.0") # handled by release scripts
+set(KF_VERSION "5.90.0") # handled by release scripts
 project(BluezQt VERSION ${KF_VERSION})
 
 include(FeatureSummary)
-find_package(ECM 5.86.0 NO_MODULE)
+find_package(ECM 5.90.0 NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -22,6 +22,7 @@ include(ECMGenerateHeaders)
 include(ECMAddQch)
 include(CMakePackageConfigHelpers)
 include(ECMQtDeclareLoggingCategory)
+include(ECMGeneratePkgConfigFile)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
@@ -38,16 +39,16 @@ ecm_setup_version(PROJECT
 # Dependencies
 set(REQUIRED_QT_VERSION 5.15.2)
 
-# Required Qt5 components to build this framework
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core DBus Network)
+# Required Qt components to build this framework
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core DBus Network)
 
-# Optional Qt5 components to build this framework
-find_package(Qt5Test ${REQUIRED_QT_VERSION} CONFIG)
-set_package_properties(Qt5Test PROPERTIES DESCRIPTION "Autotests for BluezQt" TYPE OPTIONAL)
-find_package(Qt5Qml ${REQUIRED_QT_VERSION} CONFIG)
-set_package_properties(Qt5Qml PROPERTIES DESCRIPTION "QML support for BluezQt" TYPE OPTIONAL)
-find_package(Qt5QuickTest ${REQUIRED_QT_VERSION} CONFIG)
-set_package_properties(Qt5QuickTest PROPERTIES DESCRIPTION "QML autotests for BluezQt" TYPE OPTIONAL)
+# Optional Qt components to build this framework
+find_package(Qt${QT_MAJOR_VERSION}Test ${REQUIRED_QT_VERSION} CONFIG)
+set_package_properties(Qt${QT_MAJOR_VERSION}Test PROPERTIES DESCRIPTION "Autotests for BluezQt" TYPE OPTIONAL)
+find_package(Qt${QT_MAJOR_VERSION}Qml ${REQUIRED_QT_VERSION} CONFIG)
+set_package_properties(Qt${QT_MAJOR_VERSION}Qml PROPERTIES DESCRIPTION "QML support for BluezQt" TYPE OPTIONAL)
+find_package(Qt${QT_MAJOR_VERSION}QuickTest ${REQUIRED_QT_VERSION} CONFIG)
+set_package_properties(Qt${QT_MAJOR_VERSION}QuickTest PROPERTIES DESCRIPTION "QML autotests for BluezQt" TYPE OPTIONAL)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 # Subdirectories
 add_subdirectory(src)
@@ -55,12 +56,12 @@ add_subdirectory(tools/bluezapi2qt)
 
 if (BUILD_TESTING)
     add_subdirectory(tests)
-    if(Qt5Test_FOUND)
+    if(Qt${QT_MAJOR_VERSION}Test_FOUND)
         add_subdirectory(autotests)
     endif()
 endif()
 
-if(Qt5Qml_FOUND)
+if(Qt${QT_MAJOR_VERSION}Qml_FOUND)
     add_subdirectory(src/imports)
 endif()
 
@@ -96,7 +97,7 @@ install(EXPORT KF5BluezQtTargets
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/bluezqt_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}
     COMPONENT Devel)
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
@@ -106,6 +107,12 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     if(${INSTALL_UDEV_RULE})
         install(FILES 61-kde-bluetooth-rfkill.rules DESTINATION ${UDEV_RULES_INSTALL_DIR})
     endif()
+
+    ecm_generate_pkgconfig_file(BASE_NAME KF5BluezQt
+      INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/BluezQt/
+      DEPS "Qt${QT_MAJOR_VERSION}Core Qt${QT_MAJOR_VERSION}Network Qt${QT_MAJOR_VERSION}DBus"
+    INSTALL)
+
 endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
