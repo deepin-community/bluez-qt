@@ -1,5 +1,4 @@
 usr/include/KF5/BluezQt/
-usr/include/KF5/bluezqt_version.h
 usr/lib/*/cmake/KF5BluezQt/
 usr/lib/*/libKF5BluezQt.so
 usr/lib/*/pkgconfig/KF5BluezQt.pc

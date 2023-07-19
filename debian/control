@@ -3,22 +3,22 @@ Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Aurélien COUDERC <coucouf@debian.org>,
-           Norbert Preining <norbert@preining.info>,
 Build-Depends: cmake (>= 3.16~),
-               dbus-x11,
+               dbus-x11 <!nocheck>,
                debhelper-compat (= 13),
+               dh-sequence-kf5,
                doxygen,
-               extra-cmake-modules (>= 5.90.0~),
+               extra-cmake-modules (>= 5.103.0~),
                libqt5sql5-sqlite,
                pkg-kde-tools (>> 0.15.15),
-               qml-module-qttest,
+               qml-module-qttest <!nocheck>,
                qtbase5-dev (>= 5.15.2~),
                qtdeclarative5-dev (>= 5.15.2~),
                qttools5-dev,
                qttools5-dev-tools,
-               xauth,
-               xvfb,
-Standards-Version: 4.6.0
+               xauth <!nocheck>,
+               xvfb <!nocheck>,
+Standards-Version: 4.6.2
 Homepage: https://invent.kde.org/frameworks/bluez-qt
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/bluez-qt.git
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/bluez-qt
@@ -27,7 +27,7 @@ Rules-Requires-Root: no
 Package: libkf5bluezqt-data
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
 Description: data files for bluez-qt
  bluez-qt is a Qt-style library for accessing the bluez Bluetooth stack.
  .
@@ -41,7 +41,7 @@ Architecture: linux-any
 Depends: libkf5bluezqt6 (= ${binary:Version}),
          qtbase5-dev (>= 5.15.2~),
          ${misc:Depends},
-Recommends: libkf5bluezqt-doc (= ${source:Version})
+Recommends: libkf5bluezqt-doc (= ${source:Version}),
 Description: development files for bluez-qt
  This package provides all the necessary development headers for building
  software that uses the bluez-qt library.
@@ -51,7 +51,7 @@ Description: development files for bluez-qt
 Package: libkf5bluezqt-doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
 Description: documentation files for bluez-qt
  bluez-qt is a Qt-style library for accessing the bluez Bluetooth stack.
  .
@@ -63,7 +63,7 @@ Section: doc
 Package: libkf5bluezqt6
 Architecture: linux-any
 Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
+Pre-Depends: ${misc:Pre-Depends},
 Depends: libkf5bluezqt-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
@@ -74,8 +74,8 @@ Description: Qt wrapper for bluez
 
 Package: qml-module-org-kde-bluezqt
 Architecture: linux-any
-Multi-arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: QML wrapper for bluez
  bluez-qt is a Qt-style library for accessing the bluez Bluetooth stack.
  .

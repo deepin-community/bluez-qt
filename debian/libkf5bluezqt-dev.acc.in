@@ -7,7 +7,6 @@
 
 <headers>
     /usr/include/KF5/BluezQt/
-    /usr/include/KF5/bluezqt_version.h
 </headers>
 
 <libs>
